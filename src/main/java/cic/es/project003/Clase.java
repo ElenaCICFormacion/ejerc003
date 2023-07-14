@@ -19,15 +19,11 @@ public class Clase {
 	
 	public Clase() {
 		this.alumnos = new ArrayList<Alumno>();
+		
 		recogerAlumnosTxt();
 	}
 	
-//	public void menu() {
-//		while(true) {
-//			
-//		}
-//	}
-	
+
 	public boolean crearAlumno(String nombre, String apellidos) {
 		if(nombre.equalsIgnoreCase("") || apellidos.equalsIgnoreCase("")) {
 			//los campos deben exitir
@@ -57,19 +53,20 @@ public class Clase {
 	}
 		
 		
-		public boolean eliminarAlumno(int numero) {
-			boolean a=false;
-			int count=0;
-				for(Alumno alum: alumnos) {
-					if(alum.getNumeracion()==numero) {
-						alumnos.remove(count);
-						escribirTXT();
-						break;
-					}
-					count++;
+	public boolean eliminarAlumno(int numero) {
+		boolean a=false;
+		int count=0;
+			for(Alumno alum: alumnos) {
+				if(alum.getNumeracion()==numero) {
+					alumnos.remove(count);
+					escribirTXT();
+					a=true;
+					break;
 				}
-				return a;
-	}
+				count++;
+			}
+			return a;
+}
 		
 		public boolean recorrerLista() {
 			if(alumnos.isEmpty()) {

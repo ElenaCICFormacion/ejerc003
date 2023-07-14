@@ -1,5 +1,7 @@
 package cic.es.project003;
 
+import java.util.Objects;
+
 public class Alumno {
 	
 	private int numeracion;
@@ -55,6 +57,28 @@ public class Alumno {
 	public String toString() {
 		return "Alumno [numeracion=" + numeracion + ", nombre=" + nombre + ", apellidos=" + apellidos + "]";
 	}
+
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(numeracion);
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Alumno other = (Alumno) obj;
+		return numeracion == other.numeracion;
+	}
+	
 	
 	
 	

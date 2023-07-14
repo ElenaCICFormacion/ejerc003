@@ -40,8 +40,8 @@ class ClaseTest {
 	@Test
 	void testEliminarAlumno() {
 		cut=new Clase();
-		boolean resultado=cut.eliminarAlumno(100);
-		assertEquals(resultado, false);
+		boolean resultado=cut.eliminarAlumno(3);
+		assertEquals(resultado, true);
 	}
 	
 	
@@ -80,7 +80,7 @@ class ClaseTest {
 		cut.crearAlumno("nombre4", "apellidos");
 		cut.crearAlumno("nombre3", "apellidos");
 		cut.crearAlumno("nombre4", "apellidos");
-		boolean resultado=cut.actualizarAlumno(4, new Alumno("nombreAlterado", "apellidos alterados"));
+		boolean resultado=cut.actualizarAlumno(1, new Alumno("nombreAlterado", "apellidos alterados"));
 		assertEquals(resultado, true);
 	}
 
