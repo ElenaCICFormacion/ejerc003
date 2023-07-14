@@ -119,8 +119,8 @@ public class Clase {
 			}
 			BufferedWriter bw= new BufferedWriter(new FileWriter(file, false));
 			for(Alumno alum:alumnos) {
-				bw.write(alum.getNumeracion() + "|");
-				bw.write(alum.getNombre() +"|");
+				bw.write(String.valueOf(alum.getNumeracion()).concat("|"));
+				bw.write(alum.getNombre().concat("|"));
 				bw.write(alum.getApellidos());
 				bw.newLine();
 			}
