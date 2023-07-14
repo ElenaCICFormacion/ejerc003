@@ -40,8 +40,8 @@ class ClaseTest {
 	@Test
 	void testEliminarAlumno() {
 		cut=new Clase();
-		boolean resultado=cut.eliminarAlumno(3);
-		assertEquals(resultado, true);
+		boolean resultado=cut.eliminarAlumno(100);
+		assertEquals(resultado, false);
 	}
 	
 	
